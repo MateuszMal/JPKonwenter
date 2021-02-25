@@ -27,26 +27,39 @@
                   <Font size="20.0" />
                </font>
             </Label>
+            <Label fx:id="inputFilePath" text="Plik wejściowy" />
             <Button fx:id="jpkFaButton" mnemonicParsing="false" onAction="#chooseInputFile" style="-fx-background-color: #2874a6;" text="Plik JPK FA" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
                <VBox.margin>
-                  <Insets bottom="20.0" top="20.0" />
+                  <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
             </Button>
+            <Label fx:id="outputFilePath" text="Plik wyjściowy" />
             <Button fx:id="jpkFaButton1" mnemonicParsing="false" onAction="#chooseOutputFile" style="-fx-background-color: #2874a6;" text="Plik wyjściowy" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
                <VBox.margin>
-                  <Insets bottom="20.0" />
+                  <Insets bottom="10.0" top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="makeTransform" layoutX="267.0" layoutY="239.0" mnemonicParsing="false" onAction="#onMakeTransform" style="-fx-background-color: #2874a6;" text="Wykonaj" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="10.0" top="10.0" />
                </VBox.margin>
             </Button>
             <Button fx:id="returnButton" mnemonicParsing="false" onAction="#switchToPrimary" style="-fx-background-color: #2874a6;" text="Powrót" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
             </Button>
          </children>
       </VBox>

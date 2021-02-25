@@ -4,6 +4,7 @@ import controller.Translator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
@@ -19,10 +20,11 @@ public class FilePageController {
 
     @FXML
     private Button jpkFaButton1;
-//    @FXML
-//    private Button jpkFaButton;
-//    @FXML
-//    private Button startButton;
+    @FXML
+    private Label inputFilePath;
+    @FXML
+    private Label outputFilePath;
+
 
     @FXML
     private void switchToPrimary() throws IOException {
@@ -38,6 +40,7 @@ public class FilePageController {
         if (file != null) {
             System.out.println(file.getPath());
             inputPath = file.getPath();
+            inputFilePath.setText(inputPath);
         }
     }
 
@@ -50,8 +53,12 @@ public class FilePageController {
         if (file != null) {
             System.out.println(file.getPath());
             outputPath = file.getPath() + "/output.xml";
+            outputFilePath.setText(outputPath);
         }
+    }
 
+    @FXML
+    private void onMakeTransform(ActionEvent event) {
         if (inputPath != null) {
             if (outputPath != null) {
                 Translator translator = new Translator(inputPath, outputPath);
@@ -64,5 +71,4 @@ public class FilePageController {
             DialogUtils.noInputFile();
         }
     }
-
 }
