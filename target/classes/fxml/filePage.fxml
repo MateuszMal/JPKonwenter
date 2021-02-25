@@ -8,7 +8,6 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: rgb( 133, 193, 233 );" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.FilePageController">
    <top>
       <Text strokeType="OUTSIDE" strokeWidth="0.0" text="JPKonwenter" BorderPane.alignment="CENTER">
@@ -28,12 +27,20 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="jpkFaButton" mnemonicParsing="false" onAction="#chooseFile" style="-fx-background-color: #2874a6;" text="Plik JPK FA" textFill="WHITE">
+            <Button fx:id="jpkFaButton" mnemonicParsing="false" onAction="#chooseInputFile" style="-fx-background-color: #2874a6;" text="Plik JPK FA" textFill="WHITE">
                <font>
                   <Font name="System Bold" size="17.0" />
                </font>
                <VBox.margin>
                   <Insets bottom="20.0" top="20.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="jpkFaButton1" mnemonicParsing="false" onAction="#chooseOutputFile" style="-fx-background-color: #2874a6;" text="Plik wyjściowy" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="17.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
                </VBox.margin>
             </Button>
             <Button fx:id="returnButton" mnemonicParsing="false" onAction="#switchToPrimary" style="-fx-background-color: #2874a6;" text="Powrót" textFill="WHITE">
